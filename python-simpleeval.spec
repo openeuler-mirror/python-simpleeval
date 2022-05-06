@@ -1,11 +1,12 @@
 %global _empty_manifest_terminate_build 0
 Name:		python-simpleeval
 Version:	0.9.10
-Release:	1
+Release:	2
 Summary:	A simple, safe single expression evaluator library.
 License:	MIT License
 URL:		https://github.com/danthedeckie/simpleeval
 Source0:	https://files.pythonhosted.org/packages/62/25/aec98426834844b70b7ab24b4cce8655d31e654f58e1fa9861533f5f2af1/simpleeval-0.9.10.tar.gz
+Patch0:		remove_2to3.patch
 BuildArch:	noarch
 
 
@@ -36,7 +37,7 @@ generate a string, or a number from some other input, without allowing full
 eval() or other unsafe or needlessly complex linguistics.
 
 %prep
-%autosetup -n simpleeval-0.9.10
+%autosetup -n simpleeval-0.9.10 -p1
 
 %build
 %py3_build
@@ -76,5 +77,8 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Fri May 06 2022 YukariChiba <i@0x7f.cc> - 0.9.10-2
+- Remove deprecated use_2to3 attribute
+
 * Mon Sep 06 2021 Python_Bot <Python_Bot@openeuler.org> - 0.9.10-1
 - Package Init

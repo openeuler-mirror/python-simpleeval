@@ -1,0 +1,11 @@
+diff --color -urN simpleeval-0.9.10/setup.py simpleeval-0.9.10-new/setup.py
+--- simpleeval-0.9.10/setup.py	2019-11-30 05:31:24.000000000 +0800
++++ simpleeval-0.9.10-new/setup.py	2022-05-06 10:24:50.619748500 +0800
+@@ -15,7 +15,6 @@
+     download_url='https://github.com/danthedeckie/simpleeval/tarball/' + __version__,
+     keywords=['eval', 'simple', 'expression', 'parse', 'ast'],
+     test_suite='test_simpleeval',
+-    use_2to3=True,
+     classifiers=['Development Status :: 4 - Beta',
+                  'Intended Audience :: Developers',
+                  'License :: OSI Approved :: MIT License',
